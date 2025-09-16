@@ -1,8 +1,7 @@
 
-function Button({text}){
-    return (<button style={{backgroundColor:"red"}}>
-            {text}
-            </button>
+function Button({children}){
+    return (
+        <button>{children}</button>
         )
 }
 
