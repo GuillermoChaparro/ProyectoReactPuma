@@ -1,13 +1,32 @@
-# React + Vite
+# 🛍️ React E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de **eCommercePuma** desarrollada con **React**, que permite:
+- Mostrar productos desde una base de datos (Firebase).
+- Agregar productos al carrito.
+- Visualizar el carrito con el total de la compra.
+- Finalizar la compra generando una orden.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React** — Librería principal para la construcción de la interfaz.  
+  👉 [Documentación oficial](https://react.dev/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ProyectoReact
+- **React Router** — Manejo de rutas para navegación entre vistas (lista de productos, detalle, carrito, checkout).  
+  👉 [React Router Docs](https://reactrouter.com/en/main)
+
+- **Firebase** — Base de datos y backend serverless utilizado para almacenar los productos y las órdenes.  
+  👉 [Firebase Docs](https://firebase.google.com/docs)
+
+- **React Bootstrap** — Framework CSS para componentes estilizados y responsive.  
+  👉 [React Bootstrap Docs](https://react-bootstrap.github.io/)
+
+---
+
+## ⚙️ Instalación y configuración
+
+1. **Cloná este repositorio:**
+   ```bash
+   git clone https://github.com/tuusuario/tu-repo.git
+   cd tu-repo
