@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavDropdown } from 'react-bootstrap';
 import { useState, useEffect } from 'react'
 import { NavLink } from "react-router";
+import { getCategory } from "../firebase/db";
 
 
 
@@ -13,10 +14,8 @@ function NavBar() {
   
     const [categories,setCategories]=useState([])
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/categories')
-      .then(res => res.json())
-      .then(data => setCategories(data))
-      .catch(err => console.error("Error al traer productos:", err));
+    getCategory()
+    .then(data=>setCategories(data))
   }, []);
 
   return (
@@ -30,8 +29,8 @@ function NavBar() {
             <Nav.Link href="#pricing">Deportes</Nav.Link>
           <NavDropdown title="Categorías" id="basic-nav-dropdown">
             {categories.map(category => (
-            <NavDropdown.Item as={NavLink} key={category.id} to={`/category/${category.name}`}>
-              {category.name}
+            <NavDropdown.Item as={NavLink} key={category.categoryName} to={`/category/${category.categoryName}`}>
+              {category.categoryName}
             </NavDropdown.Item>
             ))}
           </NavDropdown>

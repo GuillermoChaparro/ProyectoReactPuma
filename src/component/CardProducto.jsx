@@ -1,21 +1,28 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router';
 
 function CardProducto({item}) {
+  const navigate=useNavigate()
+
   return (
-        <Card key={item.id} style={{ width: "18rem" }}>
+        <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
-            src={item.images || "https://via.placeholder.com/180"} // img fallback
+            src={item.image || "https://via.placeholder.com/180"} // img fallback
           />
           <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
+            <Card.Title>{item.name}</Card.Title>
             <Card.Text>
-              Categoría: {item.categoria} <br />
-              Precio: ${item.precio} <br />
+              Categoría: {item.category} <br />
+              Precio: ${item.price} <br />
               Stock: {item.stock}
             </Card.Text>
             <Button variant="primary">Agregar al carrito</Button>
+
+            <Button variant="dark" onClick={()=>navigate(`/item/${item.id}`)}>
+              Ver mas
+            </Button>
           </Card.Body>
         </Card>
 
